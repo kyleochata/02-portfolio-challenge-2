@@ -1,0 +1,454 @@
+/* est variables */
+:root {
+  --primary: #000000;
+  --secondary: #014d4e;
+  --accent-color: #00F9C7;
+  --white: #ffffff;
+  --underline-thickness: 4px;
+  --section-top-pad: 15px;
+  font-size: 16px;
+}
+
+/* :focus {
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
+} */
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 1.2rem;
+}
+h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-family: monospace;
+  font-weight: bold;
+  text-decoration: underline var(--underline-thickness);
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  background-color: var(--white);
+  border-radius: 25px;
+  transition: transform .25s;
+  transform: scale(1.1)
+}
+
+section {
+  padding: 2rem 4rem;
+}
+
+.header-section {
+  display: flex;
+  flex-wrap: wrap;
+  height: max-content;
+  background-color: #000000;
+  align-items: center;
+  padding: 10px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* sets 3 equal columns within the header */
+.header-section > div {
+  width: calc(100% / 3);
+}
+
+/* header anchor and text body hyperlinks default style */
+header a,
+.bio a {
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* L side of header */
+.name-link {
+  font-family: monospace;
+  transition: font-size 0.25s;
+}
+
+.name-link:hover,
+.name-link:focus {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+}
+
+
+/* icons container in header */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+i:hover,
+i:focus {
+  transform: scale(1.5)
+}
+/* tooltips and animations for icons and name-link */
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after,
+.tooltip:focus::after {
+  position:absolute;
+  width: max-content;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: .75rem;
+  padding: 0 5px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--secondary);
+  color: var(--white);
+  margin: 3px;
+  transition: transform .75s, opacity .5s;
+  border-radius: 10px;
+}
+
+.tooltip:focus::after,
+.tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.name-link::after,
+.name-link:focus::after {
+  content:attr(data-header);
+  color: var(--white);
+  left: calc(50%-0.25(max-content));
+  top: 10%;
+  transform: translateX(0px);
+}
+
+.name-link:focus::after,
+.name-link:hover::after {
+  transform: translateX(10px);
+}
+
+.linkedin::after,
+.linkedin:focus::after {
+  content:attr(data-tt-linkedin);
+  right: 105%;
+  transform: translateX(-20px)
+}
+
+.linkedin:hover::after,
+.linkedin:focus::after {
+  transform: translateX(-3px);
+}
+
+.github::after,
+.github:focus::after {
+  content:attr(data-tt-github);
+  left: 100%;
+  transform: translateX(20px)
+}
+
+.github:hover::after,
+.github:focus::after {
+  transform: translateX(3px);
+}
+
+/* nav bar */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  float: right;     
+}
+nav ul li {
+  display: inline;
+}
+
+.nav-link::before {
+  content: ' // ';
+  color:var(--accent-color);
+}
+/* nav animations */
+.nav-link:hover,
+.nav-link:focus {
+  font-size: 20px;
+  color: var(--accent-color);
+  transition: font-size 0.25s, color 0.25s;
+}
+
+.nav-link:hover::before,
+.nav-link:focus::before {
+  content: ' // ';
+  color: var(--white);
+}
+
+/* home section: background animation and text */
+.home {
+  background : linear-gradient(132deg, var(--secondary),  var(--secondary), var(--primary), var(--secondary), var(--primary), var(--secondary)); 
+  background-size : 400% 400%;
+  animation : Gradient 25s linear infinite; 
+  height: 400px;
+  color: white;
+}
+/* keyframes dictate the animation for the gradient; 0% is saying i want the gradient animation to end at 50% of the width of .home. 100% showing i want the gradient going to the left to full width of .home. Animation is set to go to the left. */
+@keyframes Gradient {
+  /* where the color gradient starts and stops. R to L from 0 to 50. then L to R from 50 to 100. 0 must = 100 to prevent jumping of animation */
+  0% {
+  background-position: 0% 0%;
+  }
+  25% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+100% {
+    background-position: 0% 0%;
+    }
+}
+
+/* first container after header */
+.home-text {
+  position: relative;
+  text-align: center;
+  top: 35%;
+  line-height: 1.5rem;
+}
+
+#about {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+#about h2 {
+  color: var(--white);
+  text-decoration: underline var(--accent-color) var(--underline-thickness);
+  
+}
+
+/* container for separating the main content of about from the h2. Used for positioning */
+.about-body {
+  display: flex;
+  padding: 15px 15px;
+}
+.about-body > div {
+  width: 50%;
+}
+
+/* container for image portion of about */
+.about-section-left {
+  display: flex;
+  align-items: center;
+  
+}
+.about-section-left img {
+  width: 60%;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* container for skills list to sit above the .bio container */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills-list ul li {
+  display: inline-block;
+  border: solid var(--accent-color);
+  padding: 3px 5px;
+  border-radius: 10px;
+  background-color: var(--primary);
+  color: var(--white);
+  margin-top: 5px;
+}
+
+/* container for text and anchors about me */
+.bio {
+  padding-top: var(--section-top-pad);
+}
+
+/* header of bio container. "enjoying..." */
+.bio h3 {
+  font-weight: bold;
+  text-decoration: underline var(--accent-color) var(--underline-thickness);
+  text-underline-offset: 0.3rem;
+  overflow-wrap: normal;
+}
+
+.bio p {
+  padding-top: 10px;
+}
+
+/* bio anchors. fit-content prevents the hover properties unless cursor is somewhere over the words */
+.bio a {
+  display: block;
+  padding-top: var(--section-top-pad);
+  font-weight: normal;
+  width: fit-content;
+}
+
+/* transitions for anchor */
+.bio a:hover,
+.bio a:focus {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  transition: font-size .25s;
+  font-weight: bold;
+}
+
+
+/* projects section */
+#projects {
+  background-color: var(--secondary);
+}
+
+#projects h2 {
+  color:var(--white);
+  text-decoration: underline var(--accent-color) var(--underline-thickness);
+  text-align: right;
+  
+}
+
+/* container with all project cards */
+.project-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: var(--section-top-pad);
+}
+
+.project-card {
+  background-color: var(--white);
+  border: solid 3px;
+  width: 350px;
+  margin-top: var(--section-top-pad);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* heading and link in project-card */
+.project-link {
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: underline var(--accent-color) 3px;
+}
+
+/* text within project card. exclude heading */
+.project-card p {
+  padding-top: 5px;
+}
+
+
+/* links at bottom of project-card */
+.card-anchor {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-anchor {
+  padding-top: 5px;
+}
+.card-anchor ul li {
+  display: inline;
+}
+.card-anchor ul li a {
+  color: var(--white);
+  background-color: var(--primary);
+  font-size: .75rem;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* last project-card in list. Blur everything but title/link to project */
+.coming-soon div,
+.coming-soon p {
+  filter: blur(5px)
+}
+
+/* contact section */
+#contact {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+#contact h2 {
+  text-align: center;
+  text-decoration: underline var(--accent-color) var(--underline-thickness);
+  
+}
+
+/* container for label, input, textarea */
+#contact form {
+  padding: var(--section-top-pad) 20px 3px 20px
+}
+
+#contact form label,
+#contact form input,
+#contact form textarea {
+  display: block;
+  margin: var(--section-top-pad);
+  font-size: 1.02rem
+}
+
+#contact form input,
+#contact form textarea {
+  padding: 4px;
+  width: 100%;
+  transition: border 0.25s;
+}
+
+#contact textarea {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  border: solid var(--accent-color) 5px;
+}
+
+/* container for button at bottom of contact form */
+.contact-button {
+  text-align: center;
+}
+
+/* properties for button itself */
+.send {
+  padding: 1px 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: padding 0.25s;
+}
+
+.send:focus,
+.send:hover {
+  border: dashed var(--accent-color) 1px;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 3px 14px;
+}
+
+footer {
+  background-color: var(--secondary);
+  color: var(--white);
+  text-align: center;
+}
+footer p {
+  font-size: 0.75rem;
+}
