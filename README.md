@@ -15,7 +15,7 @@ While working on the CSS I learnt several new things:
 * The intricacies of the flexbox property and how it helps makes things responsive at the start instead of only relying on media queries. 
 * Using pseudo classes to create tooltips with little animations.
 
-The deployed application can be found [here](https://) and looks like the following:
+The deployed application can be found [here](https://kyleochata.github.io/02-portfolio-challenge-2/) and looks like the following:
 ![screenshot of deployed web application](./assets/images/Deployed-page-screenshot.png)
 
 ## Installation
