@@ -361,6 +361,9 @@ section {
   padding-top: 5px;
 }
 
+.project-card img {
+  width: 100%; 
+}
 
 /* links at bottom of project-card */
 .card-anchor {
@@ -460,6 +463,9 @@ footer p {
 }
 
 @media (max-width:637px) {
+  header {
+    height: max-content;
+  }
   .about-body {
     justify-content: center;
     flex-direction: column;
@@ -470,5 +476,8 @@ footer p {
   .about-section-left {
     justify-content: center;
   }
-  
+  .project-card {
+    width: 80vw;
+  }
 }
+
