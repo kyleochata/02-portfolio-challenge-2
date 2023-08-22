@@ -9,12 +9,6 @@
   font-size: 16px;
 }
 
-/* :focus {
-  outline: 0;
-  outline-color: transparent;
-  outline-style: none;
-} */
-
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   line-height: 1.2rem;
@@ -39,6 +33,7 @@ a {
   text-decoration: none;
 }
 
+/* icons within nav bar */
 i {
   background-color: var(--white);
   border-radius: 25px;
@@ -50,7 +45,7 @@ section {
   padding: 2rem 4rem;
 }
 
-.header-section {
+header {
   display: flex;
   flex-wrap: wrap;
   height: max-content;
@@ -60,10 +55,11 @@ section {
   position: sticky;
   top: 0;
   z-index: 2;
+  height: 5vh
 }
 
 /* sets 3 equal columns within the header */
-.header-section > div {
+header > div {
   width: calc(100% / 3);
 }
 
@@ -93,6 +89,7 @@ header a,
   justify-content: center;
   gap: 10px;
 }
+
 
 i:hover,
 i:focus {
@@ -126,6 +123,7 @@ i:focus {
   opacity: 1;
 }
 
+/* name at left of header */
 .name-link::after,
 .name-link:focus::after {
   content:attr(data-header);
@@ -140,6 +138,7 @@ i:focus {
   transform: translateX(10px);
 }
 
+/* linkedin icon in middle of header */
 .linkedin::after,
 .linkedin:focus::after {
   content:attr(data-tt-linkedin);
@@ -152,6 +151,7 @@ i:focus {
   transform: translateX(-3px);
 }
 
+/* github icon in middle of header */
 .github::after,
 .github:focus::after {
   content:attr(data-tt-github);
@@ -172,7 +172,7 @@ nav {
   float: right;     
 }
 nav ul li {
-  display: inline;
+  display: inline-block;
 }
 
 .nav-link::before {
@@ -198,7 +198,7 @@ nav ul li {
   background : linear-gradient(132deg, var(--secondary),  var(--secondary), var(--primary), var(--secondary), var(--primary), var(--secondary)); 
   background-size : 400% 400%;
   animation : Gradient 25s linear infinite; 
-  height: 400px;
+  height: 60vh;
   color: white;
 }
 /* keyframes dictate the animation for the gradient; 0% is saying i want the gradient animation to end at 50% of the width of .home. 100% showing i want the gradient going to the left to full width of .home. Animation is set to go to the left. */
@@ -221,7 +221,7 @@ nav ul li {
     }
 }
 
-/* first container after header */
+/* container for text within the home section*/
 .home-text {
   position: relative;
   text-align: center;
@@ -229,6 +229,7 @@ nav ul li {
   line-height: 1.5rem;
 }
 
+/* about me section */
 #about {
   background-color: var(--primary);
   color: var(--white);
@@ -237,7 +238,6 @@ nav ul li {
 #about h2 {
   color: var(--white);
   text-decoration: underline var(--accent-color) var(--underline-thickness);
-  
 }
 
 /* container for separating the main content of about from the h2. Used for positioning */
@@ -258,7 +258,6 @@ nav ul li {
 .about-section-left img {
   width: 60%;
   border-radius: 50%;
-  position: relative;
 }
 
 /* container for skills list to sit above the .bio container */
@@ -329,9 +328,14 @@ nav ul li {
 .project-card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-top: var(--section-top-pad);
+}
+
+/* ensures that the first project card + img is larger than the rest per acceptance criteria */
+#first-project {
+  width: 100vw;
 }
 
 .project-card {
@@ -451,4 +455,18 @@ footer {
 }
 footer p {
   font-size: 0.75rem;
+}
+
+@media (max-width:637px) {
+  .about-body {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about-body > div {
+    width: 100%;
+  }
+  .about-section-left {
+    justify-content: center;
+  }
+  
 }

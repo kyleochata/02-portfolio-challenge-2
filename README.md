@@ -16,7 +16,7 @@ While working on the CSS I learnt several new things:
 * Using pseudo classes to create tooltips with little animations.
 
 The deployed application can be found [here](https://) and looks like the following:
-![screenshot of deployed web application]()
+![screenshot of deployed web application](./assets/images/Deployed-page-screenshot.png)
 
 ## Installation
 
@@ -34,6 +34,7 @@ Credits are given to the following:
 
 * UCI full-stack coding bootcamp for the acceptance criteria for the project.
 * [Font-Awesome.com](https://fontawesome.com/) for their stylesheet to add the Github and LinkedIn icons.
+* [Meyerweb](https://meyerweb.com/eric/tools/css/reset/) for their open source code for the reset.css.
 * Web Dev simplified for the [tutorial](https://www.youtube.com/watch?v=ujlpzTyJp-M&t=541s&ab_channel=WebDevSimplified) on tooltips.
 &nbsp; [GitHub](https://github.com/WebDevSimplified) for WebDevSimplified.
 * Nour Ibram for [inspiration](https://codepen.io/nouribram/pen/jYqwWJ) of the animated background in the home screen. [Portfolio](https://nouribram.github.io/portfolio/) for Nour Ibram.
