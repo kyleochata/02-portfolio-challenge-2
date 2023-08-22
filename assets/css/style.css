@@ -1,3 +1,4 @@
+/* CSS was organized in by first encounter in HTML. comme */
 /* est variables */
 :root {
   --primary: #000000;
@@ -13,6 +14,32 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   line-height: 1.2rem;
 }
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  height: max-content;
+  background-color: #000000;
+  align-items: center;
+  padding: 10px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 5vh
+}
+
+/* sets 3 equal columns within the header */
+header > div {
+  width: calc(100% / 3);
+}
+
+/* header anchor and text body hyperlinks default style */
+header a,
+.bio a {
+  color: var(--white);
+  font-weight: bold;
+}
+
 h1 {
   font-size: 2rem;
   line-height: 2rem;
@@ -39,35 +66,6 @@ i {
   border-radius: 25px;
   transition: transform .25s;
   transform: scale(1.1)
-}
-
-section {
-  padding: 2rem 4rem;
-}
-
-header {
-  display: flex;
-  flex-wrap: wrap;
-  height: max-content;
-  background-color: #000000;
-  align-items: center;
-  padding: 10px 10px;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  height: 5vh
-}
-
-/* sets 3 equal columns within the header */
-header > div {
-  width: calc(100% / 3);
-}
-
-/* header anchor and text body hyperlinks default style */
-header a,
-.bio a {
-  color: var(--white);
-  font-weight: bold;
 }
 
 /* L side of header */
@@ -191,6 +189,10 @@ nav ul li {
 .nav-link:focus::before {
   content: ' // ';
   color: var(--white);
+}
+
+section {
+  padding: 2rem 4rem;
 }
 
 /* home section: background animation and text */
@@ -359,6 +361,9 @@ nav ul li {
   padding-top: 5px;
 }
 
+.project-card img {
+  width: 100%; 
+}
 
 /* links at bottom of project-card */
 .card-anchor {
@@ -458,6 +463,9 @@ footer p {
 }
 
 @media (max-width:637px) {
+  header {
+    height: max-content;
+  }
   .about-body {
     justify-content: center;
     flex-direction: column;
@@ -468,5 +476,8 @@ footer p {
   .about-section-left {
     justify-content: center;
   }
-  
+  .project-card {
+    width: 80vw;
+  }
 }
+
