@@ -1,189 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <!-- Link font awesome stylesheet for icons -->
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Kyle Etrata | Web Developer</title>
-</head>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!-- Link font awesome stylesheet for icons -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-<body>
-  <main>
+    <title>Kyle Etrata | Web Developer</title>
+  </head>
 
-    <header>
-      <div class="header-section-left">
-        <a href="#home" class="tooltip name-link" data-header="back to top">Kyle Etrata</a>
-      </div>
-      
-      <div class="header-section-middle icons">
-        <div class="tooltip linkedin" data-tt-linkedin="LinkedIn">
-          <i class="fa-brands fa-linkedin" style="color: #000000;" id="linkedin"><a href="www.linkedin.com/in/kyle-etrata-325ab3132" target="_blank"></a>
-          </i>
+  <body>
+    <main>
+      <header>
+        <div class="header-section-left">
+          <a href="#home" class="tooltip name-link" data-header="back to top"
+            >Kyle Etrata</a
+          >
         </div>
-        
-        <div class="tooltip github" data-tt-github="GitHub">
-          <i class="fa-brands fa-github" id="github">
-            <a href="https://github.com/kyleochata" target="_blank"></a>
-          </i>
+
+        <div class="header-section-middle icons">
+          <div class="tooltip linkedin" data-tt-linkedin="LinkedIn">
+            <i
+              class="fa-brands fa-linkedin"
+              style="color: #000000"
+              id="linkedin"
+              ><a
+                href="www.linkedin.com/in/kyle-etrata-325ab3132"
+                target="_blank"
+              ></a>
+            </i>
+          </div>
+
+          <div class="tooltip github" data-tt-github="GitHub">
+            <i class="fa-brands fa-github" id="github">
+              <a href="https://github.com/kyleochata" target="_blank"></a>
+            </i>
+          </div>
         </div>
+
+        <div class="header-section-right">
+          <nav>
+            <ul>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- top background img -->
+      <div class="home" id="home">
+        <!-- container for text on home top -->
+        <section class="home-text">
+          <h1>Hi, I'm Kyle Etrata | Full-Stack Web Developer</h1>
+          <p>
+            Avid enjoyer of Japanese food and always trying to learn something
+            new.
+          </p>
+        </section>
       </div>
 
-      <div class="header-section-right">
-        <nav>
-          <ul>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      
-
-    </header>
-  
-    <!-- top background img -->
-    <div class="home" id="home">
-      <!-- container for text on home top -->
-      <section class="home-text">
-        <h1>Hi, I'm Kyle Etrata | Full-Stack Web Developer</h1>
-        <p>Avid enjoyer of Japanese food and always trying to learn something new.</p>
+      <!-- about me section -->
+      <section id="about" class="about-section">
+        <h2>My Skills</h2>
+        <!-- img container -->
+        <div class="about-body">
+          <div class="about-section-left">
+            <img
+              src="./assets/images/profile-pic-square.jpg"
+              alt="photo of myself"
+            />
+          </div>
+          <!-- container for skills, bio -->
+          <div class="about-section-right">
+            <!-- container for just skills list; add over time -->
+            <article class="skills-list">
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>More coming soon!</li>
+              </ul>
+            </article>
+            <!-- container for bio -->
+            <article class="bio">
+              <h3>Enjoying the process</h3>
+              <p>
+                I have always been interested in how things work. For as long as
+                I could remember, I would always try to dive deeper into the
+                why's after learning the how. I graduated college with a degree
+                in Biochemistry and was recently in medical school for the past
+                2 years before leaving that to pursue my passion in software
+                development. I know that there's a lot to learn, but the process
+                is often just as rewarding than the destination.
+              </p>
+              <!-- the empty href will be replaced with a new html that has more in-depth bio as well as my CV for them to download if that's what they're looking for -->
+              <a href="#" target="_blank">Keep reading my bio</a>
+              <a href="#" target="_blank">Looking for my CV?</a>
+            </article>
+          </div>
+        </div>
       </section>
-    </div>
-  
-    <!-- about me section -->
-    <section id="about" class="about-section">
-      <h2>My Skills</h2>
-      <!-- img container -->
-      <div class="about-body">
-        <div class="about-section-left">
-          <img src="./assets/images/profile-pic-square.jpg" alt="photo of myself"/>
-        </div>
-        <!-- container for skills, bio -->
-        <div class="about-section-right">
-          <!-- container for just skills list; add over time -->
-          <article class="skills-list">
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>More coming soon!</li>
-            </ul>
+
+      <!-- Projects section -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card-container">
+          <!-- anchor hrefs left empty due to no projects made yet. Will add the https to deployed site once project is finished -->
+          <article class="project-card" id="first-project">
+            <div class="card-img">
+              <a
+                href="https://kyleochata.github.io/Project-1-SAK/"
+                class="project-link"
+              >
+                <img
+                  src="./assets/images/brain-balance-companion.png"
+                  alt="placeholder img"
+                />
+              </a>
+            </div>
+            <h3>
+              <a
+                href="https://kyleochata.github.io/Project-1-SAK/"
+                class="project-link"
+                >Brain Balance Companion</a
+              >
+            </h3>
+            <p>
+              Brain Balance is a program that takes patients and provides them
+              with exercises to meet their desired results of brain performance.
+              This project creates an interactable site that will increase the
+              user experience with the program. It takes info from a google
+              sheet and displays that data in a cleaner user interface.
+              Technology used: HTML, CSS, JavaScript, Web APIs, CSS frameworkes.
+            </p>
+            <div class="card-anchor">
+              <ul>
+                <li>
+                  <a
+                    href="https://kyleochata.github.io/Project-1-SAK/"
+                    target="_blank"
+                    >Live Demo ></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/kyleochata/Project-1-SAK"
+                    target="_blank"
+                    >GitHub ></a
+                  >
+                </li>
+              </ul>
+            </div>
           </article>
-          <!-- container for bio -->
-          <article class="bio">
-            <h3>Enjoying the process</h3>
-            <p>I have always been interested in how things work. For as long as I could remember, I would always try to dive deeper into the why's after learning the how. I graduated college with a degree in Biochemistry and was recently in medical school for the past 2 years before leaving that to pursue my passion in software development. I know that there's a lot to learn, but the process is often just as rewarding than the destination.</p>
-  <!-- the empty href will be replaced with a new html that has more in-depth bio as well as my CV for them to download if that's what they're looking for -->
-            <a href="#" target="_blank">Keep reading my bio</a>
-            <a href="#" target="_blank">Looking for my CV?</a>
+
+          <article class="project-card">
+            <div class="card-img">
+              <a
+                href="https://afternoon-ravine-50223-4c951dfeba48.herokuapp.com/"
+                class="project-link"
+              >
+                <img
+                  src="./assets/images/dashboard1.png"
+                  alt="screenshot of Hammer IT Help Desk"
+                />
+              </a>
+            </div>
+            <h3>
+              <a
+                href="https://afternoon-ravine-50223-4c951dfeba48.herokuapp.com/"
+                class="project-link"
+                >Hammer IT Help Desk</a
+              >
+            </h3>
+            <p>
+              This is a full-stack project that was built to demonstrate
+              handling internal help tickets for a company. It has feature that
+              change based off of if you are apart of the IT department that
+              isn't available to those who are trying to get help from the IT
+              crew. Technologies used: Express, Sequelize, MySQL, HTML, CSS,
+              JavaScript, Anime.js
+            </p>
+            <div class="card-anchor">
+              <ul>
+                <li>
+                  <a
+                    href="https://afternoon-ravine-50223-4c951dfeba48.herokuapp.com/"
+                    >Live Demo ></a
+                  >
+                </li>
+                <li>
+                  <a href="https://github.com/kyleochata/Hammer-Help-Desk"
+                    >GitHub ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-img">
+              <a href="#" class="project-link">
+                <img
+                  src="https://placehold.jp/350x160.png"
+                  alt="placeholder img"
+                />
+              </a>
+            </div>
+            <h3><a href="#" class="project-link">3rd Project</a></h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Blanditiis voluptas illo dignissimos exercitationem cumque facilis
+              a maiores. Beatae, quos dignissimos quibusdam fuga commodi et,
+              repellat ipsa placeat fugiat quae impedit.
+            </p>
+            <div class="card-anchor">
+              <ul>
+                <li><a href="#">Live Demo ></a></li>
+                <li><a href="#">GitHub ></a></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card coming-soon">
+            <div class="card-img">
+              <a href="#" class="project-link">
+                <img
+                  src="https://placehold.jp/350x160.png"
+                  alt="placeholder img"
+                />
+              </a>
+            </div>
+            <h3><a href="#" class="project-link">Coming Soon</a></h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Blanditiis voluptas illo dignissimos exercitationem cumque facilis
+              a maiores. Beatae, quos dignissimos quibusdam fuga commodi et,
+              repellat ipsa placeat fugiat quae impedit.
+            </p>
+            <div class="card-anchor">
+              <ul>
+                <li><a href="#">Live Demo ></a></li>
+                <li><a href="#">GitHub ></a></li>
+              </ul>
+            </div>
           </article>
         </div>
-      </div>
-    </section>
-  
-    <!-- Projects section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-card-container">
-<!-- anchor hrefs left empty due to no projects made yet. Will add the https to deployed site once project is finished -->
-        <article class="project-card" id="first-project">
-          <div class="card-img">
-            <a href="#https://kyleochata.github.io/Project-1-SAK/" class="project-link">
-              <img src="./assets/images/brain-balance-companion.png" alt="placeholder img">
-            </a>
-          </div>
-          <h3><a href="#https://kyleochata.github.io/Project-1-SAK/" class="project-link">Brain Balance Companion</a></h3>
-          <p>Brain Balance is a program that takes patients and provides them with exercises to meet their desired results of brain performance. This project creates an interactable site that will increase the user experience with the program. It takes info from a google sheet and displays that data in a cleaner user interface. Technology used: HTML, CSS, JavaScript, Web APIs, CSS frameworkes.</p>
-          <div class="card-anchor">
-            <ul>
-              <li><a href="https://kyleochata.github.io/Project-1-SAK/" target="_blank">Live Demo ></a></li>
-              <li><a href="https://github.com/kyleochata/Project-1-SAK" target="_blank">GitHub ></a></li>
-            </ul>
-          </div>
-        </article>
+      </section>
 
-        <article class="project-card">
-          <div class="card-img">
-            <a href="#" class="project-link">
-              <img src="https://placehold.jp/350x160.png" alt="placeholder img">
-            </a>
+      <!-- Contact form -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <form action="./index.html" method="POST">
+          <label>Your Name (required):</label>
+          <input
+            type="text"
+            name="username"
+            placeholder="youremail@email.com"
+            required
+          />
+          <label>Your Email (required):</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="youremail@email.com"
+            required
+          />
+          <label>Subject:</label>
+          <input type="text" name="subject" placeholder="Inquiry" />
+          <label>Your Message:</label>
+          <textarea
+            type="text"
+            name="message"
+            placeholder="Hello! I would like to know more about..."
+            required
+          ></textarea>
+          <div class="contact-button">
+            <button type="submit" name="Send" class="send">Send</button>
           </div>
-          <h3><a href="#" class="project-link">2nd Project</a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis voluptas illo dignissimos exercitationem cumque facilis a maiores. Beatae, quos dignissimos quibusdam fuga commodi et, repellat ipsa placeat fugiat quae impedit.</p>
-          <div class="card-anchor">
-            <ul>
-              <li><a href="#">Live Demo ></a></li>
-              <li><a href="#">GitHub ></a></li>
-            </ul>
-          </div>
-        </article>
+        </form>
+      </section>
+    </main>
 
-        <article class="project-card">
-          <div class="card-img">
-            <a href="#" class="project-link">
-              <img src="https://placehold.jp/350x160.png" alt="placeholder img">
-            </a>
-          </div>
-          <h3><a href="#" class="project-link">3rd Project</a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis voluptas illo dignissimos exercitationem cumque facilis a maiores. Beatae, quos dignissimos quibusdam fuga commodi et, repellat ipsa placeat fugiat quae impedit.</p>
-          <div class="card-anchor">
-            <ul>
-              <li><a href="#">Live Demo ></a></li>
-              <li><a href="#">GitHub ></a></li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-card coming-soon">
-          <div class="card-img">
-            <a href="#" class="project-link">
-              <img src="https://placehold.jp/350x160.png" alt="placeholder img">
-            </a>
-          </div>
-          <h3><a href="#" class="project-link">Coming Soon</a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis voluptas illo dignissimos exercitationem cumque facilis a maiores. Beatae, quos dignissimos quibusdam fuga commodi et, repellat ipsa placeat fugiat quae impedit.</p>
-          <div class="card-anchor">
-            <ul>
-              <li><a href="#">Live Demo ></a></li>
-              <li><a href="#">GitHub ></a></li>
-            </ul>
-          </div>
-        </article>
-
-      </div>
-      
-    </section>
-  
-    <!-- Contact form -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <form action="./index.html" method="POST">
-        <label>Your Name (required):</label>
-        <input type="text" name="username" placeholder="youremail@email.com" required>
-        <label>Your Email (required):</label>
-        <input type="email" name="email" placeholder="youremail@email.com" required>
-        <label>Subject:</label>
-        <input type="text" name="subject" placeholder= "Inquiry">
-        <label>Your Message:</label>
-        <textarea type="text" name="message" placeholder="Hello! I would like to know more about..." required></textarea>
-        <div class="contact-button">
-          <button type="submit" name="Send" class="send">Send</button>
-        </div>
-        
-      </form>
-    </section>
-
-  </main>
-
-  <footer>
-    <h4>Made by Kyle Etrata</h4>
-    <p>2023 UCI full-stack Challenge-2 project</p>
-  </footer>
-</body>
+    <footer>
+      <h4>Made by Kyle Etrata</h4>
+      <p>2023 UCI full-stack Challenge-2 project</p>
+    </footer>
+  </body>
 </html>
